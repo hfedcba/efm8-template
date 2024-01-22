@@ -1,0 +1,9 @@
+device ${JLINK_DEVICE}
+h
+r
+erase
+loadbin ${BINARY}, ${FLASH_ORIGIN}
+verifybin ${BINARY}, ${FLASH_ORIGIN}
+r
+exec SetRestartOnClose=0
+qc
